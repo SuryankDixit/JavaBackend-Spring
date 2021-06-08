@@ -21,12 +21,15 @@ public class DemoApplication {
 			2.	What are the dependencies of a bean :@Autowired:(sort algo for binary search)
 			3.	Where to search for beans : @ComponentScan	// no need to do this
 			All the beans will be managed by Application Context
+			run method returns application context back;
+
+			ApplicationContext applicationContext = SpringApplication.run(DemoApplication.class, args);
+			BinarySearchImpl bs = applicationContext.getBean(BinarySearchImpl.class);
+			System.out.println(bs.binarySearch(new int[]{1,2,3,4,5,6,7,8,9}, 3));
 		 */
-		// run method returns application context back;
 		ApplicationContext applicationContext = SpringApplication.run(DemoApplication.class, args);
 		BinarySearchImpl bs = applicationContext.getBean(BinarySearchImpl.class);
 		System.out.println(bs.binarySearch(new int[]{1,2,3,4,5,6,7,8,9}, 3));
-		
 	}
 
 }
