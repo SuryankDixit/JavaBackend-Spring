@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.example.componentscan")
+@ComponentScan("com.example.components")
 public class scopeDemoApplication {
 
     private static Logger LOGGER = LoggerFactory.getLogger(scopeDemoApplication.class);

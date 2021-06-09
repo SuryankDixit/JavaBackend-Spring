@@ -12,7 +12,7 @@ public class basicDemoApplication {
 		/*
 			tut1 : without using any annotations
 			BinarySearchImpl bs = new BinarySearchImpl(new BubbleSortAlgorithm());
-			int idx = bs.binarySearch(new int[]{1,2,3,4,5,6,7,8,9}, 3);
+			int idx = bs.bin arySearch(new int[]{1,2,3,4,5,6,7,8,9}, 3);
 			System.out.println(idx);
 		 */
 
