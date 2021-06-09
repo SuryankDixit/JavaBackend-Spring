@@ -1,12 +1,10 @@
 package com.example.demo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
-
-	@Autowired
-	private SortAlgorithm sortAlgorithm;
 	/*
 		tut1
 		All mandatory dependency should use constructor injection
@@ -22,7 +20,17 @@ public class BinarySearchImpl {
 		}
 	*/
 
+	/*
+		Auto wiring can also be done using name
+		eg:
+		@Autowired
+		private SortAlgorithm bubbleSortAlgorithm;
 
+		@Primary has higher priority over the name of the variable
+	 */
+	@Autowired
+	@Qualifier("bubble")
+	private SortAlgorithm sortAlgorithm;
 	public int binarySearch(int[] numbers, int numberToSearchFor) {
 
 		int[] sortedNumbers = sortAlgorithm.sort(numbers);
